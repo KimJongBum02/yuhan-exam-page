@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="교재 되새김 문제와 수업 자료 핵심 문법을 함께 학습하는 파이썬 문제은행">
+  <title>파이썬 문제은행</title>
+  <link rel="stylesheet" href="assets/python/styles.css">
+</head>
+<body>
+  <div class="shell">
+    <header class="site-header">
+      <div>
+        <p class="course">파이썬 생활 프로그래밍</p>
+        <h1>파이썬 문제은행</h1>
+        <p class="subtitle">교재 되새김 문제와 암기할 핵심 문법을 한곳에서 연습하세요.</p>
+      </div>
+      <div class="mode-switch" role="group" aria-label="풀이 방식">
+        <button type="button" data-mode="practice" aria-pressed="true">연습 모드</button>
+        <button type="button" data-mode="exam" aria-pressed="false">시험 모드</button>
+      </div>
+    </header>
+
+    <section class="filter-panel" aria-labelledby="filterTitle">
+      <div class="filter-copy">
+        <h2 id="filterTitle">학습 범위</h2>
+        <p>필터를 바꾸면 해당 범위로 새 문제 세트가 시작됩니다.</p>
+      </div>
+      <div class="filter-row">
+        <span class="filter-label">자료</span>
+        <div class="chip-group" id="sourceFilters" role="group" aria-label="자료 필터"></div>
+      </div>
+      <div class="filter-row">
+        <span class="filter-label">단원</span>
+        <div class="chip-group" id="chapterFilters" role="group" aria-label="단원 필터"></div>
+      </div>
+      <p class="selection-summary" id="selectionSummary" aria-live="polite"></p>
+    </section>
+
+    <section class="progress-panel" aria-label="풀이 진행 상황">
+      <div class="progress-meta" id="progressMeta" aria-live="polite"></div>
+      <div class="progress-track" aria-hidden="true"><i id="progressBar"></i></div>
+    </section>
+
+    <main id="stage" tabindex="-1"></main>
+    <div class="page-tools" id="pageTools"></div>
+    <p class="keyboard-help" id="keyboardHelp"></p>
+  </div>
+
+  <script src="assets/python/questions.js"></script>
+  <script src="assets/python/app.js"></script>
+</body>
+</html>
